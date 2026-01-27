@@ -9,16 +9,17 @@ function load(){
     const menuHeader = document.createElement("h1");
     menuHeader.textContent = "Odin Restaurant Menu:";
 
-    const menuUL = document.createElement("ul#menuDiv");
+    const menuUL = document.createElement("div");
+    menuUL.id = "menu";
 
     const menuObj = [
-        new MenuItem.MenuItem("sushi", sushiPath, 20, 200),
-        new MenuItem.MenuItem("pizza", pizzaPath, 25, 1300),
-        new MenuItem.MenuItem("pho", phoPath, 30, 500),
+        new MenuItem.MenuItem("Sushi", sushiPath, 20, 200),
+        new MenuItem.MenuItem("Pizza", pizzaPath, 25, 1300),
+        new MenuItem.MenuItem("Pho", phoPath, 30, 500),
     ];
 
     for (const item of menuObj){
-        menuUL.appendChild(item.menuListItem);                
+        menuUL.appendChild(item.menuItemDiv);                
     }
 
     const allElements = [menuHeader, menuUL];

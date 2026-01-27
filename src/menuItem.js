@@ -8,8 +8,9 @@ class MenuItem {
         this.imgWidth = 240;
     }
 
-    get menuListItem(){
-        const listItem = document.createElement("li");
+    get menuItemDiv(){
+        const menuItemDiv = document.createElement("div");
+        menuItemDiv.id = "menuItem";
         
         const imgElement = document.createElement("img")
         imgElement.src = this.imgPath;
@@ -26,12 +27,18 @@ class MenuItem {
         const caloriesP = document.createElement("p");
         caloriesP.textContent = "Calories: " + this.calories;
 
-        const allElements = [imgElement, nameP, priceP, caloriesP];
-        for (const element of allElements){
-            listItem.appendChild(element);
+        const menuItemInfoDiv = document.createElement("div");
+        menuItemInfoDiv.id = "menuItemInfo";
+
+        for (const paras of [nameP, priceP, caloriesP]){
+            menuItemInfoDiv.appendChild(paras);
         }
 
-        return listItem;
+        for (const element of [imgElement, menuItemInfoDiv]){
+            menuItemDiv.appendChild(element);
+        }
+
+        return menuItemDiv;
     }
 }
 
