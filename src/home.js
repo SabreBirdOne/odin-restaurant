@@ -1,4 +1,4 @@
-import homeImagePath from "./food.jpg"
+import homeImagePath from "./img/food.jpg"
 
 function load(){
     let contentDiv = document.querySelector("div#content");
