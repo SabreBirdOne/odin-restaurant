@@ -4,6 +4,8 @@ class MenuItem {
         this.imgPath = imgPath;
         this.priceUSD = priceUSD; // number
         this.calories = calories; // number
+
+        this.imgWidth = 240;
     }
 
     get menuListItem(){
@@ -11,7 +13,7 @@ class MenuItem {
         
         const imgElement = document.createElement("img")
         imgElement.src = this.imgPath;
-        imgElement.width = 640;
+        imgElement.width = this.imgWidth;
         imgElement.alt = "Image of " + this.name;
 
         const nameP = document.createElement("p");
@@ -32,10 +34,5 @@ class MenuItem {
         return listItem;
     }
 }
-
-import homeImagePath from "./img/food.jpg"
-const sushi = new MenuItem("sushi", homeImagePath, 30, 200);
-console.log(sushi.menuListItem);
-
 
 export {MenuItem};
