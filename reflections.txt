@@ -1,0 +1,35 @@
+ABOUT BUNDLING WORKFLOW
+
+The bundling workflow seen in this project really makes me feel like a web developer. 
+It's complicated at first, but I feel I can get used to this.
+My biggest challenge is wrapping my head around all the ways to import and export code (js and css) and assets.
+
+During the menu.js implementation, I rewrote code thinking something's up with my image loading, 
+but turns out I'm importing images improperly, so I went back to get my old implementation back.
+My feeling awful about my health at the time surely didn't help.
+
+ABOUT NPM
+NPM seems like a great way to manage dependencies, just like all those package managers in Linux distros.
+package.json is easy to follow. Just gotta get used to the commands, which I'll get plenty of practice in later projects.
+
+MORE FACTORIES?
+Now that I reflected on this, maybe I should have used the factory pattern more. I did embrace the factory pattern a bit 
+by making a MenuItem class containing data of each dish, and make a function that creates the HTML div element from its 
+data. 
+
+Maybe next time, I should just wrap all the createElement and textContent code blocks into some HTML element factory, 
+receiving a string for the HTML element and textContent and returning the element. 
+Since I use the <ul> HTML element quite a bit, that deserves its own factory.
+
+Brilliant, I could cut down 30% of my JavaScript and make it more readable and expandable.
+My appetite for more code isn't there though, urgh. 
+
+ABOUT PROJECT 
+This project really shows how package management and bundling works, and how we separate directories for production and develepment,
+to balance uptime versus maintenance needs. I just need to practice this moving forward. 
+
+Part of me feels wanting. Typing up all the elements for each webpage is more tiresome in JavaScript than in HTML. 
+I understand the need for dynamic manipulation of the DOM though.
+
+I had to make createElement calls manually everywhere. I mean, I could also have made factories. Maybe one of those frontend 
+frameworks I'll learn later in the course will have these factories, and then some.
